@@ -276,10 +276,16 @@
   </div>
 
   <div class="sidebar">
-    <div class="panel" id="infoPanel">
+    <div class="panel" id="howToPanel">
       <h2>How to use this map</h2>
       <p>Move the slider (or hit <strong>Play</strong>) to move through 1944&ndash;1949. Countries change colour the year they became Soviet satellite states. Click any country — at any point in the timeline — to read what happened there.</p>
       <p>Turn on the checkboxes above to add the Iron Curtain line, Marshall Plan aid, or the Turkey/Greece/Cyprus flashpoints.</p>
+      <p><strong>A country's information changes depending on where the timeline slider is — the same country can show a different status before and after it became communist.</strong></p>
+    </div>
+    <div class="panel" id="infoPanel">
+      <h2>Country details</h2>
+      <p>Information will appear here when you click on a country.</p>
+      <p><strong>What you see will depend on where the timeline slider currently is.</strong></p>
     </div>
     <div class="panel" id="legendPanel">
       <h2 style="margin-bottom:10px;">Legend</h2>
@@ -506,7 +512,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
   updateYear(1944);
   selectedRegion = null;
   regionsG.selectAll('path.region').classed('selected', false);
-  document.getElementById('infoPanel').innerHTML = `<h2>How to use this map</h2><p>Move the slider (or hit <strong>Play</strong>) to move through 1944&ndash;1949. Countries change colour the year they became Soviet satellite states. Click any country — at any point in the timeline — to read what happened there.</p><p>Turn on the checkboxes above to add the Iron Curtain line, Marshall Plan aid, or the Turkey/Greece/Cyprus flashpoints.</p>`;
+  document.getElementById('infoPanel').innerHTML = `<h2>Country details</h2><p>Information will appear here when you click on a country.</p><p><strong>What you see will depend on where the timeline slider currently is.</strong></p>`;
 });
 
 updateYear(1944);
